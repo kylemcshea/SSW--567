@@ -19,6 +19,8 @@ class Test(unittest.TestCase):
         self.assertEqual(triangle.classify_triangle(3,4,5),"right")
         self.assertEqual(triangle.classify_triangle(3,3,3),"equilateral")
         self.assertEqual(triangle.classify_triangle(24,10,26),"right")
-        
+        self.assertEqual(triangle.classify_triangle(24,10,"yay"),"Integer Input only")
+        self.assertEqual(triangle.classify_triangle(24,"wow",3),"Integer Input only")
+        self.assertEqual(triangle.classify_triangle(24,10,26.0),"Integer Input only")
 if __name__ == "__main__":
     unittest.main()
